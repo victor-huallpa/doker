@@ -1,0 +1,10 @@
+
+RewriteEngine On
+Options All -Indexes
+
+# Redirigir todas las solicitudes válidas a index.php con el parámetro 'views'
+# toma el primer parametro de la url
+RewriteRule ^([a-zA-Z0-9/ñÑ-]+)$ index.php?vista=$1 [L,QSA]
+
+
+#npx @tailwindcss/cli -i ./app/views/resources/css/input.css -o ./app/views/resources/css/output.css --watch
