@@ -3,7 +3,7 @@ name: Build & Push Docker Image
 on:
   push:
     branches:
-      - main
+      - main  # Se ejecutará cuando hagas un push a la rama 'main'
 
 jobs:
   build:
@@ -17,5 +17,5 @@ jobs:
 
       - name: Build and Push Docker Image
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/docker-app:latest .
-          docker push ${{ secrets.DOCKER_USERNAME }}/docker-app:latest
+          docker build -t victorhvdivertido/docker:latest .
+          docker push victorhvdivertido/docker:latest
